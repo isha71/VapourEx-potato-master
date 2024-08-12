@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Fight</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="main-screen">
+            <h1>Potato Fight</h1>
+            <button id="play-btn">Play</button>
+        </div>
+        <div id="lobby-screen" class="hidden">
+            <h2>Finding opponent...</h2>
+            <div class="loader"></div>
+        </div>
+        <div id="countdown-screen" class="hidden">
+            <h2>Game starting in</h2>
+            <div id="countdown">5</div>
+        </div>
+        <div id="game-screen" class="hidden">
+            <div id="timer">15</div>
+            <div id="score">Score: 0</div>
+            <div id="potato"></div>
+        </div>
+        <div id="battle-screen" class="hidden">
+            <div id="player-potato" class="potato"></div>
+            <div id="opponent-potato" class="potato"></div>
+            <div id="player-health" class="health-bar"></div>
+            <div id="opponent-health" class="health-bar"></div>
+        </div>
+        <div id="result-screen" class="hidden">
+            <h2 id="result-message"></h2>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

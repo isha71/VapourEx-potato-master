@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('assets/background.png');
+    background-size: cover;
+}
+
+#game-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#countdown {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+#potato {
+    width: 100px;
+    height: 100px;
+    background-image: url('assets/potato.png');
+    background-size: contain;
+    margin: 20px auto;
+}
+
+.potato {
+    width: 100px;
+    height: 100px;
+    background-image: url('assets/potato.png');
+    background-size: contain;
+    position: absolute;
+}
+
+#player-potato { left: 20%; }
+#opponent-potato { right: 20%; }
+
+.health-bar {
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    margin: 10px auto;
+}
+
+.health-bar::before {
+    content: '';
+    display: block;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.5s ease-in-out;
+}
+
+#player-health::before { width: 100%; }
+#opponent-health::before { width: 100%; }
